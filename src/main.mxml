@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="458" height="370">
+
+<mx:Script>
+ 
+	<![CDATA[
+		function click1( )
+		{
+		 TextInput1.text='Макс і Віка лаба №7';
+		 CheckBox1.selected=true;
+		}
+		import mx.controls.Alert;
+		public function click2( ):void 
+        {
+         Alert.show ('Хто: ' + TextInput1.text + ', Вік: ' + NumericStepper1.value);
+        }
+	]]>
+
+</mx:Script> 
+	<mx:Panel width="275" height="195" layout="absolute" horizontalCenter="0" verticalCenter="2">
+		<mx:Button id="Button1" x="38" y="122" label="Натисни мене!" themeColor="#FF0036" borderColor="#0897FC" cornerRadius="10" alpha="0.71" fillAlphas="[1.0, 1.0]" fillColors="[#FB0404, #FB0404]" color="#FFFFFF"
+			       click="click1( );click2( );" enabled="true"/>
+		<mx:Label id="Label1" y="10" text="Натисни її!" textAlign="center" alpha="1.0" x="58" color="#000000" enabled="true"/>
+		<mx:TextInput id="TextInput1" x="10" y="36" enabled="true"/>
+		<mx:CheckBox id="CheckBox1" x="178" y="36" label="Введено" enabled="true" selected="false"/>
+		<mx:NumericStepper id="NumericStepper1" height="22" width="87" x="48" y="92" value="18" maximum="100" minimum="0"/>
+		<mx:Label id="Label2" x="48" y="66" text="Введи свій вік!" enabled="true"/>
+	</mx:Panel>
+
+</mx:Application>
+
